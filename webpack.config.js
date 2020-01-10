@@ -1,6 +1,8 @@
+const TerserPlugin = require("terser-webpack-plugin");
+
 module.exports = env => {
   console.log({minimize: env.minimize});
-  return {
+  return Object.assign({}, {}, {
     devtool: "source-map",
 
     output: {
@@ -13,9 +15,13 @@ module.exports = env => {
 
     mode: "production",
     optimization: env.minimize ? {
-      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          sourceMap: true,
+        }),
+      ],
     } : {
       minimize: false,
     },
-  };
+  });
 };
