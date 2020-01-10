@@ -1,0 +1,15 @@
+.DS_Store
+
+# Build files
+
+## Others
+node_modules/
+
+# Editor
+
+## IJ
+.idea/
+*.iml
+
+## Emacs
+*~

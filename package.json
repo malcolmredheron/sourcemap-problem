@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "webpack-dev-server --env.minimize=0 --config webpack.config.js --progress",
+    "dev-minimize": "webpack-dev-server --env.minimize=1 --config webpack.config.js --progress"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "terser-webpack-plugin": "^2.3.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
